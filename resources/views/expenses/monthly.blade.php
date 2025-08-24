@@ -10,14 +10,14 @@
         @foreach($monthlyExpenses as $category => $amount)
             <div class="flex justify-between items-center border-b pb-2">
                 <span class="text-lg font-medium">{{ $category }}:</span>
-                <span class="text-lg font-bold">${{ number_format($amount, 2) }}</span>
+                <span class="text-lg font-bold"><strong>৳</strong>{{ number_format($amount, 2) }}</span>
             </div>
         @endforeach
         
         <div class="border-t-2 border-gray-300 pt-4 mt-4">
             <div class="flex justify-between items-center">
                 <span class="text-xl font-bold">Total:</span>
-                <span class="text-xl font-bold text-blue-600">${{ number_format($total, 2) }}</span>
+                <span class="text-xl font-bold text-blue-600"><strong>৳</strong>{{ number_format($total, 2) }}</span>
             </div>
         </div>
     </div>
